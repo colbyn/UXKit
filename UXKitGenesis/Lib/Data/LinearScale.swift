@@ -15,10 +15,10 @@ struct LinearScale {
         self.range = range
     }
     func scale(_ value: CGFloat) -> CGFloat {
-        let minDomain = self.domain.0;
-        let maxDomain = self.domain.1;
-        let minRange = self.range.0;
-        let maxRange = self.range.1;
+        let minDomain = domain.0;
+        let maxDomain = domain.1;
+        let minRange = range.0;
+        let maxRange = range.1;
         return (maxRange - minRange) * (value - minDomain) / (maxDomain - minDomain) + minRange
     }
 }

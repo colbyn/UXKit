@@ -8,7 +8,8 @@
 import UIKit
 
 
-typealias RootViewController = ViewController
+typealias RootViewController = PrototypeViewController
+
 
 
 //class ReactiveList<T>: NSObject, UITableViewDataSource, UITableViewDelegate {
@@ -22,47 +23,86 @@ typealias RootViewController = ViewController
 //}
 
 
-class ViewController: UITableViewController {
+
+
+class TableData: NSObject, UITableViewDataSource, UITableViewDelegate {
     private var myArray: Array<String> = RANDOM_ARRAY_OF_STRINGS
-    override func viewDidLoad() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+    static let CELL_REUSE_IDENTIFIER: String = "MyCell"
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        myArray.count
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Num: \(indexPath.row)")
-        print("Value: \(myArray[indexPath.row])")
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-//        let cell = UITableViewCell.init(style: UITableViewCell.CellStyle.value2, reuseIdentifier: "MyCell")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableData.CELL_REUSE_IDENTIFIER, for: indexPath as IndexPath)
         cell.textLabel!.text = "\(myArray[indexPath.row])"
         cell.showsReorderControl = true
         return cell
     }
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            tableView.beginUpdates()
-            self.myArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
-            tableView.endUpdates()
-        }
-    }
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let movedObject = self.myArray[sourceIndexPath.row]
-        self.myArray.remove(at: sourceIndexPath.row)
-        self.myArray.insert(movedObject, at: destinationIndexPath.row)
+}
+
+class ViewController: UIViewController {
+    private var tableView: UITableView!
+    private var tableData: TableData = TableData()
+    private var label: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView = UITableView(frame: CGRect.zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: TableData.CELL_REUSE_IDENTIFIER)
+        tableView.dataSource = tableData
+        tableView.delegate = tableData
     }
 }
+
+//class ViewController: UITableViewController {
+//    private var myArray: Array<String> = RANDOM_ARRAY_OF_STRINGS
+//
+//    override func viewDidLoad() {
+//        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+//        self.tableView.dataSource = self
+//        self.tableView.delegate = self
+//        test_rust_function()
+//    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("Num: \(indexPath.row)")
+//        print("Value: \(myArray[indexPath.row])")
+//    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return myArray.count
+//    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+////        let cell = UITableViewCell.init(style: UITableViewCell.CellStyle.value2, reuseIdentifier: "MyCell")
+//        cell.textLabel!.text = "\(myArray[indexPath.row])"
+//        cell.showsReorderControl = true
+//        return cell
+//    }
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            tableView.beginUpdates()
+//            self.myArray.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
+//            tableView.endUpdates()
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let movedObject = self.myArray[sourceIndexPath.row]
+//        self.myArray.remove(at: sourceIndexPath.row)
+//        self.myArray.insert(movedObject, at: destinationIndexPath.row)
+//    }
+//}
 
 //class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //
@@ -158,7 +198,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
 //}
 
 
-struct I {}
 
 
 
@@ -208,14 +247,14 @@ class SVGPathShape: BaseView {
     
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()!
-        var parser = Parser(path: self.pathString)
+        var parser = Parser(path: pathString)
         let commands = parser.run()
         let xScale = LinearScale(
-            domain: self.xAxisRange,
+            domain: xAxisRange,
             range: (rect.minX, rect.maxX)
         )
         let yScale = LinearScale(
-            domain: self.yAxisRange,
+            domain: yAxisRange,
             range: (rect.minY, rect.maxY)
         )
         for cmd in commands {
@@ -257,7 +296,7 @@ class SVGPathShape: BaseView {
             for chunk in path.split(separator: " ") {
                 results.append("\(chunk)")
             }
-            self.value = results
+            value = results
         }
         struct MoveCmd {
             let to: CGPoint
@@ -276,20 +315,20 @@ class SVGPathShape: BaseView {
             case curve(CurveCmd)
         }
         mutating func extract<T>(_ f: (String) -> T?) -> T? {
-            if let first = self.value.first {
+            if let first = value.first {
                 if let parsed = f(first) {
-                    let poped = self.value.removeFirst()
-                    assert(poped == first)
+                    let popped = value.removeFirst()
+                    assert(popped == first)
                     return parsed
                 }
             }
             return nil
         }
         mutating func int() -> Double? {
-            return self.extract({Double($0)})
+            self.extract({Double($0)})
         }
         mutating func letter(_ letter: Character) -> Character? {
-            return self.extract({
+            self.extract({
                 if $0 == "\(letter)" {
                     return letter
                 }
@@ -339,7 +378,7 @@ class SVGPathShape: BaseView {
         }
         mutating func run() -> Array<PathCmd> {
             var cmds: Array<PathCmd> = []
-            while !self.value.isEmpty {
+            while !value.isEmpty {
                 if let move = self.moveCmd() {
                     cmds.append(PathCmd.move(move))
                     continue
@@ -352,7 +391,7 @@ class SVGPathShape: BaseView {
                     cmds.append(PathCmd.curve(curve))
                     continue
                 }
-                fatalError("What to do? \(cmds) \(self.value)")
+                fatalError("What to do? \(cmds) \(value)")
             }
             return cmds
         }
@@ -454,9 +493,9 @@ class SVGPathShape: BaseView {
 //        mutating func extract<T>(_ f: (String) -> T?) -> T? {
 //            if let first = self.value.first {
 //                if let parsed = f(first) {
-//                    let poped = self.value.removeFirst()
-//                    assert(poped == first)
-//                    return parsed
+//                    let popped = self.value.removeFirst()
+//                    assert(popped == first)
+//                    return popped
 //                }
 //            }
 //            return nil

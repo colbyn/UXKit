@@ -2,6 +2,7 @@
 members = [
     "ux-kit-rs",
     "ux-kit-rs-c-api",
+    "genesis-rs",
 ]
 
 

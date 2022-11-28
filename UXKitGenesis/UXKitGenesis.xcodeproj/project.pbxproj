@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3E8108838C1DE3250EA241 /* UX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E89837C1326CE9CA64D96 /* UX.swift */; };
+		AF3E81321CC2C00943454B5B /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E8B186AEAC91D3EF219D0 /* Prototype.swift */; };
+		AF3E820D54DB1D448C8E0BCA /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E823CFFD7F125B2F0E5F8 /* Array.swift */; };
+		AF3E8843AF214C69F1AF6449 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E823CFFD7F125B2F0E5F8 /* Array.swift */; };
+		AF3E89CC09F987B3DCB910CC /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E8F131086FA6DBAD86B63 /* Optional.swift */; };
+		AF3E8BA6570BA870A1EDC061 /* UX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E89837C1326CE9CA64D96 /* UX.swift */; };
+		AF3E8D5E4F42AE98B6542334 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E8F131086FA6DBAD86B63 /* Optional.swift */; };
+		AF3E8E689D14F9ED4F0B4A16 /* SwiftUIDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E8C5DA9D511239EDA91A1 /* SwiftUIDev.swift */; };
+		F42529E12929E687009FFF48 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = F42529E02929E687009FFF48 /* Collections */; };
+		F42529E32929E687009FFF48 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = F42529E22929E687009FFF48 /* DequeModule */; };
+		F42529E52929E687009FFF48 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = F42529E42929E687009FFF48 /* OrderedCollections */; };
+		F49AE348292B59EF00FAC298 /* NewPrototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49AE347292B59EF00FAC298 /* NewPrototype.swift */; };
 		F4F94B92292831600063DA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F94B80292831600063DA0C /* Assets.xcassets */; };
 		F4F94B93292831600063DA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F94B80292831600063DA0C /* Assets.xcassets */; };
 		F4F94B9F292831FF0063DA0C /* IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94B9E292831FF0063DA0C /* IOSApp.swift */; };
@@ -14,9 +26,20 @@
 		F4F94BA5292832610063DA0C /* LinearScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94BA3292832610063DA0C /* LinearScale.swift */; };
 		F4F94BA8292832950063DA0C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94BA7292832950063DA0C /* SampleData.swift */; };
 		F4F94BA9292832950063DA0C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94BA7292832950063DA0C /* SampleData.swift */; };
+		F4F94BAD292856140063DA0C /* libgenesis_rs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F94BAC292856140063DA0C /* libgenesis_rs.a */; platformFilter = maccatalyst; };
+		F4F94BB1292867750063DA0C /* RandomDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94BB0292867750063DA0C /* RandomDev.swift */; };
+		F4F94BB2292867750063DA0C /* RandomDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94BB0292867750063DA0C /* RandomDev.swift */; };
+		F4FADD33292B210E00188E5B /* UXFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FADD32292B210E00188E5B /* UXFont.swift */; };
+		F4FADD34292B210E00188E5B /* UXFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FADD32292B210E00188E5B /* UXFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3E823CFFD7F125B2F0E5F8 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		AF3E89837C1326CE9CA64D96 /* UX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UX.swift; sourceTree = "<group>"; };
+		AF3E8B186AEAC91D3EF219D0 /* Prototype.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
+		AF3E8C5DA9D511239EDA91A1 /* SwiftUIDev.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIDev.swift; sourceTree = "<group>"; };
+		AF3E8F131086FA6DBAD86B63 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		F49AE347292B59EF00FAC298 /* NewPrototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPrototype.swift; sourceTree = "<group>"; };
 		F4F94B80292831600063DA0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F94B85292831600063DA0C /* UXKitGenesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXKitGenesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F94B8B292831600063DA0C /* UXKitGenesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXKitGenesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +48,12 @@
 		F4F94B9E292831FF0063DA0C /* IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSApp.swift; sourceTree = "<group>"; };
 		F4F94BA3292832610063DA0C /* LinearScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearScale.swift; sourceTree = "<group>"; };
 		F4F94BA7292832950063DA0C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		F4F94BAC292856140063DA0C /* libgenesis_rs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgenesis_rs.a; path = "../target/x86_64-apple-ios-macabi/release/libgenesis_rs.a"; sourceTree = "<group>"; };
+		F4F94BAE292856530063DA0C /* IOS-FFI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOS-FFI.h"; sourceTree = "<group>"; };
+		F4F94BAF292856670063DA0C /* genesis-rs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "genesis-rs.h"; path = "../../genesis-rs/c-ffi/include/genesis-rs.h"; sourceTree = "<group>"; };
+		F4F94BB0292867750063DA0C /* RandomDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDev.swift; sourceTree = "<group>"; };
+		F4FADD30292B134E00188E5B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = iOS/Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F4FADD32292B210E00188E5B /* UXFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42529E12929E687009FFF48 /* Collections in Frameworks */,
+				F4F94BAD292856140063DA0C /* libgenesis_rs.a in Frameworks */,
+				F42529E52929E687009FFF48 /* OrderedCollections in Frameworks */,
+				F42529E32929E687009FFF48 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +78,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3E837616B9BD69C79E35AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E823CFFD7F125B2F0E5F8 /* Array.swift */,
+				AF3E8F131086FA6DBAD86B63 /* Optional.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F4F94B782928315C0063DA0C = {
 			isa = PBXGroup;
 			children = (
+				F4FADD30292B134E00188E5B /* Playground.playground */,
+				F4F94BAA292855620063DA0C /* FFI */,
 				F4F94BA0292832390063DA0C /* Lib */,
 				F4F94B7D2928315D0063DA0C /* Shared */,
 				F4F94B8C292831600063DA0C /* macOS */,
 				F4F94B9C292831930063DA0C /* iOS */,
 				F4F94B86292831600063DA0C /* Products */,
+				F4F94BAB292856140063DA0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F94B80292831600063DA0C /* Assets.xcassets */,
+				F4F94BB0292867750063DA0C /* RandomDev.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -86,6 +132,9 @@
 			children = (
 				F4F94B9D292831AF0063DA0C /* iOS.entitlements */,
 				F4F94B9E292831FF0063DA0C /* IOSApp.swift */,
+				AF3E8C5DA9D511239EDA91A1 /* SwiftUIDev.swift */,
+				AF3E8B186AEAC91D3EF219D0 /* Prototype.swift */,
+				F49AE347292B59EF00FAC298 /* NewPrototype.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -93,8 +142,11 @@
 		F4F94BA0292832390063DA0C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				F4FADD31292B20F400188E5B /* UX */,
 				F4F94BA62928328E0063DA0C /* Dev */,
 				F4F94BA12928323E0063DA0C /* Data */,
+				AF3E89837C1326CE9CA64D96 /* UX.swift */,
+				AF3E837616B9BD69C79E35AD /* Extensions */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -115,6 +167,31 @@
 			path = Dev;
 			sourceTree = "<group>";
 		};
+		F4F94BAA292855620063DA0C /* FFI */ = {
+			isa = PBXGroup;
+			children = (
+				F4F94BAF292856670063DA0C /* genesis-rs.h */,
+				F4F94BAE292856530063DA0C /* IOS-FFI.h */,
+			);
+			path = FFI;
+			sourceTree = "<group>";
+		};
+		F4F94BAB292856140063DA0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4F94BAC292856140063DA0C /* libgenesis_rs.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4FADD31292B20F400188E5B /* UX */ = {
+			isa = PBXGroup;
+			children = (
+				F4FADD32292B210E00188E5B /* UXFont.swift */,
+			);
+			path = UX;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +208,11 @@
 			dependencies = (
 			);
 			name = "UXKitGenesis (iOS)";
+			packageProductDependencies = (
+				F42529E02929E687009FFF48 /* Collections */,
+				F42529E22929E687009FFF48 /* DequeModule */,
+				F42529E42929E687009FFF48 /* OrderedCollections */,
+			);
 			productName = "UXKitGenesis (iOS)";
 			productReference = F4F94B85292831600063DA0C /* UXKitGenesis.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +262,9 @@
 				Base,
 			);
 			mainGroup = F4F94B782928315C0063DA0C;
+			packageReferences = (
+				F42529DF2929E687009FFF48 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = F4F94B86292831600063DA0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,7 +301,15 @@
 			files = (
 				F4F94B9F292831FF0063DA0C /* IOSApp.swift in Sources */,
 				F4F94BA8292832950063DA0C /* SampleData.swift in Sources */,
+				F4F94BB1292867750063DA0C /* RandomDev.swift in Sources */,
 				F4F94BA4292832610063DA0C /* LinearScale.swift in Sources */,
+				AF3E8108838C1DE3250EA241 /* UX.swift in Sources */,
+				AF3E8843AF214C69F1AF6449 /* Array.swift in Sources */,
+				AF3E89CC09F987B3DCB910CC /* Optional.swift in Sources */,
+				AF3E8E689D14F9ED4F0B4A16 /* SwiftUIDev.swift in Sources */,
+				AF3E81321CC2C00943454B5B /* Prototype.swift in Sources */,
+				F49AE348292B59EF00FAC298 /* NewPrototype.swift in Sources */,
+				F4FADD33292B210E00188E5B /* UXFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +319,11 @@
 			files = (
 				F4F94BA5292832610063DA0C /* LinearScale.swift in Sources */,
 				F4F94BA9292832950063DA0C /* SampleData.swift in Sources */,
+				F4F94BB2292867750063DA0C /* RandomDev.swift in Sources */,
+				F4FADD34292B210E00188E5B /* UXFont.swift in Sources */,
+				AF3E8BA6570BA870A1EDC061 /* UX.swift in Sources */,
+				AF3E820D54DB1D448C8E0BCA /* Array.swift in Sources */,
+				AF3E8D5E4F42AE98B6542334 /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,12 +466,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "c-ffi/Catalyst/lib";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.colbyn.UXKitGenesis;
 				PRODUCT_NAME = UXKitGenesis;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FFI/IOS-FFI.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,6 +506,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FFI/IOS-FFI.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -419,6 +520,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -450,6 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -504,6 +607,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F42529DF2929E687009FFF48 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F42529E02929E687009FFF48 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F42529DF2929E687009FFF48 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		F42529E22929E687009FFF48 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F42529DF2929E687009FFF48 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		F42529E42929E687009FFF48 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F42529DF2929E687009FFF48 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4F94B792928315C0063DA0C /* Project object */;
 }
